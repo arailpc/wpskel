@@ -1,11 +1,12 @@
+import { hot } from "react-hot-loader/root";
 import React from "react";
 import $ from "jquery";
 import Image from "./img/delete.svg";
 
-export default class App extends React.Component {
+class App extends React.Component {
   componentDidMount() {
     $("<h1 />")
-      .text("hello")
+      .text("hello1")
       .css({
         color: "red"
       })
@@ -17,8 +18,11 @@ export default class App extends React.Component {
         <Image className="icon" width={50} height={50} />
         <header />
         <hr />
+        <span>hello</span>
         <div className="box" />
       </React.Fragment>
     );
   }
 }
+
+export default hot(App);
